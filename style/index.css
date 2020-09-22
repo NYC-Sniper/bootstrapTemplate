@@ -11002,7 +11002,7 @@ button.close {
 }
 
 .custom-toggler {
-  background-image: url("assets/menu.svg") !important;
+  background-image: url("../assets/menu.svg") !important;
   border-color: #fff !important;
 }
 
