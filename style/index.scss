@@ -1,0 +1,94 @@
+// import
+@import 'vars', 'utilities';
+// Custom.scss
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.toAlert {
+    margin-bottom: 0 !important;
+}
+
+.navigation {
+    background-color: #fff;
+
+    .navbar {
+        .nav-link {
+            cursor: pointer;
+        }
+
+        .cta {
+            padding: 0 30px;
+            margin-left: 20px;
+            background-color: $indigo-600;
+
+            a {
+                color: #fff !important;
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 992px) {
+                margin-left: 0 !important;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+
+    .h {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        @media only screen and (max-width: 995px) {
+            text-align: center;
+        }
+    }
+    .test1,
+    .test2 {
+        height: 300px;
+        width: 100%;
+    }
+
+    .test1 {
+        background-color: $indigo;
+    }
+
+    .test2 {
+        background-color: $blue;
+    }
+}
+
+.blur {
+    backdrop-filter: blur(.8rem) !important;
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    box-shadow:
+        0 0.7px 2.2px rgba(0, 0, 0, 0.014),
+        0 1.8px 5.3px rgba(0, 0, 0, 0.02),
+        0 3.4px 10px rgba(0, 0, 0, 0.025),
+        0 6px 17.9px rgba(0, 0, 0, 0.03),
+        0 11.3px 33.4px rgba(0, 0, 0, 0.036),
+        0 27px 80px rgba(0, 0, 0, 0.05);
+
+    .navbar-brand {
+        position: relative;
+        font-size: 1rem;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}
+
+.custom-toggler {
+    background-image: url('/assets/menu.svg') !important;
+    border-color: #fff !important;
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
