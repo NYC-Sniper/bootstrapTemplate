@@ -8,5 +8,4 @@ function mainHeader() {
     } else {
         document.getElementById("navi").className = "navigation";
     }
-    
 };
