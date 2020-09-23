@@ -51,7 +51,7 @@
 }
 
 .custom-toggler {
-  background-image: url("/assets/menu-4-line.svg") !important;
+  background-image: url("../assets/menu-4-line.svg") !important;
   border-color: #fff !important;
 }
 
