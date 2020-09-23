@@ -5,11 +5,6 @@ gsap.from('.title', {
     x: -90,
 });
 
-gsap.from('.image', {
-    opacity: 0,
-    duration: 1.2,
-    x: 90
-});
 const wordsArray = ["We are Design Duty", "We are a UI/UX Agency."];
 
 let cursor = gsap.to('.cursor', {
@@ -38,6 +33,13 @@ i.to(".textArray", {
 wordsTimeline.add(i);
 });
 
+gsap.from('.navigation', {
+    duration: 1,
+    opacity: 0,
+    y: -90
+})
+
+// add blur class to navbar
 window.onscroll = function () {
     mainHeader()
 };
