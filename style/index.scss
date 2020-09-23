@@ -101,6 +101,10 @@
         .h-title {
             font-size: 4rem;
             font-family: $mainFont;
+            span {
+                display: inline-block;
+                font-family: $mainFont;
+            }
         }
 
         // call to action btn
