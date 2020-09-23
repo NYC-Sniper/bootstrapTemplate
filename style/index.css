@@ -105,12 +105,6 @@
   width: 100%;
 }
 
-.blur .navbar-brand img {
-  width: 50px !important;
-  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 .custom-toggler {
   background-image: url("../assets/menu-4-line.svg") !important;
   border-color: #f8f9fa !important;
@@ -159,6 +153,9 @@
             align-items: flex-start;
     min-height: 50vh;
     margin-bottom: 25px;
+  }
+  .hero-content .title .h-title {
+    font-size: 2rem !important;
   }
   .hero-content .title .call-to-action {
     margin-top: 10px !important;
