@@ -1,11 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@600&display=swap");
-.toAlert {
-  margin-bottom: 0 !important;
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@600&display=swap");
+.cta-nav {
+  padding: 0 30px;
+  margin-left: 20px;
+  background-color: #560dcb;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cta-nav a {
+  color: #f8f9fa !important;
+  text-align: center;
+}
+
+.cta-nav:hover::after {
+  height: 100%;
+  border-radius: 0;
+}
+
+.cta-nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 0 0 70px 70px;
+  background-color: #35087e;
+  z-index: -1;
+  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media only screen and (max-width: 992px) {
+  .cta-nav {
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+}
+
+.cta {
+  padding: 10px 30px;
+  background-color: #560dcb;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  text-align: center;
+  color: #f8f9fa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #2d076b;
+  color: #f8f9fa;
+}
+
+*, body, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 .navigation {
   background-color: #343a40;
-  font-family: "Quicksand", sans-serif;
 }
 
 .navigation .navbar .navbar-brand {
@@ -40,8 +103,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .blur .navbar-brand img {
@@ -52,52 +113,11 @@
 
 .custom-toggler {
   background-image: url("../assets/menu-4-line.svg") !important;
-  border-color: #fff !important;
+  border-color: #f8f9fa !important;
 }
 
 .navbar-toggler {
   border-color: transparent !important;
-}
-
-.cta {
-  padding: 0 30px;
-  margin-left: 20px;
-  background-color: #560dcb;
-  position: relative;
-  z-index: 1;
-  -webkit-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.cta a {
-  color: #fff !important;
-  text-align: center;
-}
-
-.cta:hover::after {
-  height: 100%;
-  border-radius: 0;
-}
-
-.cta::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  border-radius: 0 0 70px 70px;
-  background-color: #35087e;
-  z-index: -1;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-@media only screen and (max-width: 992px) {
-  .cta {
-    margin-left: 0 !important;
-    margin-top: 10px;
-  }
 }
 
 .hero-content {
@@ -114,7 +134,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 @media only screen and (max-width: 992px) {
@@ -124,15 +144,25 @@
     padding: 4%;
   }
   .hero-content .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 50vh;
     margin-bottom: 25px;
   }
-  .hero-content .title .h-title {
-    font-size: 2rem !important;
+  .hero-content .title .call-to-action {
+    margin-top: 10px !important;
   }
-}
-
-.hero-content .title .tag {
-  font-family: "Quicksand", sans-serif;
 }
 
 .hero-content .title .h-title {
@@ -140,26 +170,8 @@
   font-family: "Anton", sans-serif;
 }
 
-.hero-content .title .text {
-  font-family: "Quicksand", sans-serif;
-}
-
 .hero-content .title .call-to-action {
-  margin-top: 25px;
-}
-
-.hero-content .title .call-to-action .cta {
-  font-family: "Quicksand", sans-serif;
-  margin-left: 0;
-  padding: 10px 50px;
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-content .title .call-to-action .cta:hover {
-  background-color: #420a9b;
+  margin-top: 30px;
 }
 
 .hero-content .image img {
