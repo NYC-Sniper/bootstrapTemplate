@@ -6,7 +6,9 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-*,body, html {
+*,
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,131 +18,141 @@
 // hero
 .hero {
     background-color: $dark;
+
     // navigation
-.navigation {
-    .navbar {
-        // brand
-        .navbar-brand {
-            display: flex;
+    .navigation {
+        .navbar {
 
-            // brand image
-            img {
-                width: 60px;
-                align-self: center;
+            // brand
+            .navbar-brand {
+                display: flex;
+
+                // brand image
+                img {
+                    width: 60px;
+                    align-self: center;
+                }
             }
+
+            // navbar links
+            .nav-link {
+                cursor: pointer;
+                color: rgba(236, 236, 236, 0.99);
+
+                &::hover {
+                    color: rgba(236, 236, 236, 1);
+                }
+            }
+
+
         }
 
-        // navbar links
-        .nav-link {
-            cursor: pointer;
-            color: rgba(236, 236, 236, 0.99); 
-            &::hover {
-                color: rgba(236, 236, 236, 1); 
-            }
-        }
-
-        
     }
 
-}
+    // hero content
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+        color: $light;
 
-// hero content
-.hero-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    color: $light;
+        // mobile version
+        @media only screen and (max-width: 992px) {
+            flex-direction: column !important;
+            background-image: url('../assets/hero1.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1;
 
+            // overlay
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: transparentize(#1a1a2e, 0.8);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
 
-    @media only screen and (max-width: 992px) {
-        flex-direction: column !important;
-        background-image: url('../assets/hero1.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        position: relative;
-        z-index: 1;
+            // title
+            .hero-title {
+                .hero-h {
+                    font-size: 2.3rem !important;
+                }
+            }
 
-        // overlay
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: transparentize(#000000, 0.7);
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .hero-title {
-            .hero-h {
-                font-size: 2.3rem !important;
+            // image
+            .hero-image {
+                display: none;
             }
         }
 
-        .hero-image {
-            display: none;
-        }
-     }
- 
+        // title
+        .hero-title {
 
-    .hero-title {
-        // tag
-        .tag {
-            span {
-                position: relative;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 40%;
-                    background-color: $blue-500;
-                    z-index: -1;
+            // tag
+            .tag {
+                span {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 40%;
+                        background-color: $blue-500;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            // title
+            .hero-h {
+                font-family: $mainFont;
+                font-size: 3rem;
+
+                span {
+                    font-family: $mainFont;
                 }
             }
         }
-        // title
-        .hero-h {
-            font-family: $mainFont;
-            font-size: 3rem;
-            span {
-                font-family: $mainFont;
+
+        // hero image 
+        .hero-image {
+            position: relative;
+
+            img {
+                max-width: 900px;
+                width: 100%;
+            }
+
+            // review
+            .review {
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $light;
+                color: $dark;
+                padding: 10px;
+
+                p {
+                    font-family: $mainFont;
+                    text-align: center;
+                    margin-bottom: 0;
+                    font-size: 1.2rem;
+                }
             }
         }
     }
-
-    // hero image 
-    .hero-image {
-        position: relative;
-        img {
-            max-width: 900px;
-            width: 100%;
-        }
-
-        // review
-        .review {
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: $light;
-            color: $dark;
-            padding: 10px;
-            
-            p {
-                font-family: $mainFont;
-                text-align: center;
-                margin-bottom: 0;
-                font-size: 1.2rem;
-            }
-        }
-    }
-}
 
 }
 
@@ -158,6 +170,7 @@
     left: 0;
     width: 100%;
 }
+
 // Editing the default bs toggler
 .custom-toggler {
     background-image: url('../assets/menu-4-line.svg') !important;
@@ -166,4 +179,93 @@
 
 .navbar-toggler {
     border-color: transparent !important;
+}
+
+// services
+.services-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    color: $light;
+    background-color: $dark;
+    position: relative;
+
+    // mobile version
+    @media only screen and (max-width: 992px) {
+        &::before {
+            display: none;
+        }
+        .s-title {
+            padding: 0 !important;
+        }
+    }
+
+    // line above
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 2px;
+        background-color: transparentize($light, 0.8);
+    }
+
+    .s-title {
+        padding: 0 20%;
+
+        h1 {
+            font-family: $mainFont;
+            font-size: 3rem;
+        }
+    }
+}
+
+// service
+.services {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: $light;
+    background-color: $dark;
+
+    // mobile version
+    @media only screen and (max-width: 992px) {
+        flex-direction: column !important;
+        .service {
+            justify-content: center !important;
+            width: 100% !important;
+            min-height: 200px !important;
+        }
+    }
+
+
+    .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 300px;
+        width: 300px;
+        padding: 20px;
+
+        img {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: $mainFont;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 550;
+        }
+    }
 }

@@ -1,3 +1,5 @@
+// animations
+// animating the hero section
 gsap.from('.hero-title', {
     opacity: 0,
     stagger: 0.2,
@@ -5,8 +7,17 @@ gsap.from('.hero-title', {
     x: -90,
 });
 
+// animating the hero image
+gsap.from(".hero-image", {
+    x: 90,
+    duration: 1.2,
+    opacity: 0,
+})
+
+// self-typing words
 const wordsArray = ["UI Design", "User Experience", "Brand Identity", "Everything"];
 
+// animating the cursor
 let cursor = gsap.to('.cursor', {
 opacity: 0,
 repeat: -1,
@@ -33,7 +44,7 @@ i.to(".words", {
 wordsTimeline.add(i);
 });
 
-
+// animating the navbar
 gsap.from('.navigation', {
     duration: 1,
     opacity: 0,
