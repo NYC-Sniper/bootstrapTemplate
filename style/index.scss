@@ -13,11 +13,12 @@
     font-family: $font;
 }
 
-// navigation
-.navigation {
+// hero
+.hero {
     background-color: $dark;
+    // navigation
+.navigation {
     .navbar {
-
         // brand
         .navbar-brand {
             display: flex;
@@ -43,10 +44,110 @@
 
 }
 
+// hero content
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    color: $light;
+
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: column !important;
+        background-image: url('../assets/hero1.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+
+        // overlay
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparentize(#000000, 0.7);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-title {
+            .hero-h {
+                font-size: 2.3rem !important;
+            }
+        }
+
+        .hero-image {
+            display: none;
+        }
+     }
+ 
+
+    .hero-title {
+        // tag
+        .tag {
+            span {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 40%;
+                    background-color: $blue-500;
+                    z-index: -1;
+                }
+            }
+        }
+        // title
+        .hero-h {
+            font-family: $mainFont;
+            font-size: 3rem;
+            span {
+                font-family: $mainFont;
+            }
+        }
+    }
+
+    // hero image 
+    .hero-image {
+        position: relative;
+        img {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        // review
+        .review {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $light;
+            color: $dark;
+            padding: 10px;
+            
+            p {
+                font-family: $mainFont;
+                text-align: center;
+                margin-bottom: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+}
+
 // add blur to navbar background on scroll
 .blur {
     backdrop-filter: blur(.8rem) !important;
-    background-color: rgba(17, 17, 17, 0.55) !important;
+    background-color: rgba(26, 26, 46, 0.75) !important;
     box-shadow:
         0 0px 1.7px rgba(0, 0, 0, 0.024),
         0 0px 4.8px rgba(0, 0, 0, 0.035),
@@ -65,108 +166,4 @@
 
 .navbar-toggler {
     border-color: transparent !important;
-}
-
-// contact pop up
-.contact-pop-up {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translate(0, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media only screen and (max-width: 992px) {
-        display: none;
-    }
-
-    div {
-        height: 40px;
-        width: 40px;
-        background-color: $light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2px 0;
-        transition: .4s ease-in-out;
-        a {
-            text-decoration: none;
-            font-size: 1.4rem;
-            display: flex;
-            color: $dark;
-
-            i {
-                line-height: 1;
-                align-self: center;
-            }
-        }
-
-        &:hover {
-            background-color: $indigo-200;
-        }
-    }
-}
-
-// hero content
-.hero-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-image: url('https://cdn.dribbble.com/users/1516344/screenshots/6617658/17_liquidbackgrounds_2_1600x1200_1_2x.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:  center center;
-
-    // on small screens
-    @media only screen and (max-width: 992px) {
-        flex-wrap: wrap;
-        padding: 4%;
-        min-height: 40vh !important;
-        .title {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 50vh;
-            margin-bottom: 25px;
-            // 
-            .h-title {
-                font-size: 1.8rem !important;
-            }
-
-            .text {
-                padding: 0 !important;
-            }
-
-            .call-to-action {
-                margin-top: 10px !important;
-            }
-        }
-    }
-
-    // title goes here
-    .title {
-        color: $light;
-        .h-title {
-            font-size: 4rem;
-            font-family: $mainFont;
-            span {
-                display: inline-block;
-                font-family: $mainFont;
-            }
-        }
-
-        .text {
-            padding-right: 50%;
-        }
-
-        // call to action btn
-        .call-to-action {
-            margin-top: 30px;
-        }
-    }
 }

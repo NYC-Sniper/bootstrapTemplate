@@ -1,11 +1,11 @@
-gsap.from('.title', {
+gsap.from('.hero-title', {
     opacity: 0,
     stagger: 0.2,
     duration: 1.2,
     x: -90,
 });
 
-const wordsArray = ["We are Design Duty", "We are a UI/UX Agency."];
+const wordsArray = ["UI Design", "User Experience", "Brand Identity", "Everything"];
 
 let cursor = gsap.to('.cursor', {
 opacity: 0,
@@ -26,12 +26,13 @@ let i = gsap.timeline({
     delay: 1, 
     repeatDelay: 1
 });
-i.to(".textArray", {
+i.to(".words", {
     duration: 1, 
     text: word,
 });
 wordsTimeline.add(i);
 });
+
 
 gsap.from('.navigation', {
     duration: 1,
