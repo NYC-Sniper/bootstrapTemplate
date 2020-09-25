@@ -34,6 +34,9 @@ html, * {
     .navbar-nav {
         text-transform: uppercase;
         font-size: .8rem;
+        a {
+            font-weight: 600 !important;
+        }
     }
 }
 
@@ -57,7 +60,7 @@ html, * {
             }
         }
         .partTwo {
-            display: none;
+            min-height: 500px;
         }
     }
 
@@ -66,7 +69,7 @@ html, * {
         padding: 4%;
         align-items: center;
         display: flex;
-        flex: 1;
+        flex: 1 50%;
         .title {
             h1 {
                 font-family: $mainFont;
@@ -75,15 +78,16 @@ html, * {
             p {
                 padding-right: 30px;
                 line-height: 2;
+                font-weight: 300;
             }
         }
     }
 
     // right part
     .partTwo {
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
-        flex: 1;
+        flex: 1 50%;
         background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9dca60ad4a3a3c16ceadeb_20190706_SFP_Lifestyle_Accessories_JohnKira_FullRes-125.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -91,10 +95,94 @@ html, * {
     }
 }
 
-// test
-.test {
-    padding: 4%;
-    h1 {
-        font-family: $mainFont;
+// categories
+.categories {
+    // title
+    .title {
+        margin: 0 auto;
+        margin-top: 50px;
+        h2 {
+            font-family: $mainFont;
+            text-align: center;
+        }
+    }
+
+    .c-cards {
+        padding: 4%;
+        display: grid;
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
+        grid-template-columns: auto auto;
+
+        // mobile
+        @media screen and (max-width: 992px) {
+            grid-template-columns: auto;
+        }
+
+        // cards
+        .c-card {
+            min-height: 580px;
+            min-width: 30%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            padding: 40px;
+            display: flex;
+            align-items: flex-end;
+
+            // title
+            .c-title {
+                background-color: rgba(255, 255, 255, 0.75);
+                backdrop-filter: blur(1rem);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px;
+                height: 100px;
+                width: 100%;
+
+                // main link
+                .c-link {
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: $dark;
+                }
+
+                // sub link
+                .c-sub {
+                    color: $dark;
+                    text-decoration: none;
+                    display: flex;
+                    font-size: 1.1rem;
+                    i {
+                        margin-left: 10px;
+                        transition: .4s ease-in-out;
+                    }
+
+                    &:hover > i {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+        // card one
+        .c1 {
+            background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1c8916a656a029c3d82_20190619_SFP_Lifestyle_PrideTeesAndMore_FullRes-104.jpg");
+        }
+        // card two
+        .c2 {
+            background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1b0ad4a3ae318cdc394_20190805_SFP_Lifestyle_OSLOuterwear-124.jpg");
+        }
+        // card three
+        .c3 {
+            background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1df74e7f57a5deec8d6_hunter-johnson-W82dYwtQrTk-unsplash.jpg");
+        }
+        // card four
+        .c4 {
+            background-image: url("https://assets.website-files.com/5d9d08afa8a650dd43830c03/5da05eb2718dbe911936ab6d_5d9de0b7b7de93ab4e6020fd_haupes-co-6hpJZcqWt4I-unsplash.jpg");
+        }
     }
 }

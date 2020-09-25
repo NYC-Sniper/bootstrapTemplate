@@ -6,7 +6,7 @@
 
 // CTA 
 .cta-nav {
-    background: linear-gradient(-45deg, $indigo-700, $blue-300, $cyan-700);
+    background: linear-gradient(-45deg, $indigo-700, $blue-300, $cyan-300);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;    padding: 0 30px;
     margin-left: 15px;
@@ -48,7 +48,7 @@
     display: flex;
     font-size: 1.2rem;
     transition: all .4s ease-in-out;
-    background: linear-gradient(-45deg, $indigo-700, $blue-300, $cyan-700);
+    background: linear-gradient(-45deg, $indigo-700, $blue-300, $cyan-300);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
 
@@ -58,12 +58,6 @@
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow:
-  0 0px 6.1px rgba(0, 110, 255, 0.932),
-  0 0px 20.3px rgba(0, 110, 255, 0.119),
-  0 0px 91px rgba(0, 110, 255, 0.2)
-;
-
     }
 
     i {

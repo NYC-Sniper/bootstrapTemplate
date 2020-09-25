@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300&display=swap");
 .cta-nav {
-  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #106e7d);
+  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #61c0cf);
   background-size: 400% 400%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
@@ -61,7 +61,7 @@
   font-size: 1.2rem;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #106e7d);
+  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #61c0cf);
   background-size: 400% 400%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
@@ -75,8 +75,6 @@
 .cta:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-box-shadow: 0 0px 6.1px rgba(0, 110, 255, 0.932), 0 0px 20.3px rgba(0, 110, 255, 0.119), 0 0px 91px rgba(0, 110, 255, 0.2);
-          box-shadow: 0 0px 6.1px rgba(0, 110, 255, 0.932), 0 0px 20.3px rgba(0, 110, 255, 0.119), 0 0px 91px rgba(0, 110, 255, 0.2);
 }
 
 .cta i {
@@ -137,7 +135,7 @@
 }
 
 .cta-nav {
-  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #106e7d);
+  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #61c0cf);
   background-size: 400% 400%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
@@ -186,7 +184,7 @@
   font-size: 1.2rem;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #106e7d);
+  background: linear-gradient(-45deg, #450ba5, #5a9cfe, #61c0cf);
   background-size: 400% 400%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
@@ -200,8 +198,6 @@
 .cta:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-box-shadow: 0 0px 6.1px rgba(0, 110, 255, 0.932), 0 0px 20.3px rgba(0, 110, 255, 0.119), 0 0px 91px rgba(0, 110, 255, 0.2);
-          box-shadow: 0 0px 6.1px rgba(0, 110, 255, 0.932), 0 0px 20.3px rgba(0, 110, 255, 0.119), 0 0px 91px rgba(0, 110, 255, 0.2);
 }
 
 .cta i {
@@ -281,13 +277,17 @@ html, * {
 }
 
 .navbar .navbar-brand {
-  font-family: "DM Serif Display", serif;
+  font-family: "Abril Fatface", serif;
   font-size: 1.4rem;
 }
 
 .navbar .navbar-nav {
   text-transform: uppercase;
   font-size: .8rem;
+}
+
+.navbar .navbar-nav a {
+  font-weight: 600 !important;
 }
 
 .hero {
@@ -319,7 +319,7 @@ html, * {
     font-size: 3rem !important;
   }
   .hero .partTwo {
-    display: none;
+    min-height: 500px;
   }
 }
 
@@ -332,37 +332,138 @@ html, * {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 50%;
+          flex: 1 50%;
 }
 
 .hero .partOne .title h1 {
-  font-family: "DM Serif Display", serif;
+  font-family: "Abril Fatface", serif;
   font-size: 4rem;
 }
 
 .hero .partOne .title p {
   padding-right: 30px;
   line-height: 2;
+  font-weight: 300;
 }
 
 .hero .partTwo {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 50%;
+          flex: 1 50%;
   background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9dca60ad4a3a3c16ceadeb_20190706_SFP_Lifestyle_Accessories_JohnKira_FullRes-125.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.test {
-  padding: 4%;
+.categories .title {
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.test h1 {
-  font-family: "DM Serif Display", serif;
+.categories .title h2 {
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+}
+
+.categories .c-cards {
+  padding: 4%;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 40px;
+  grid-column-gap: 40px;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 992px) {
+  .categories .c-cards {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+.categories .c-cards .c-card {
+  min-height: 580px;
+  min-width: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.categories .c-cards .c-card .c-title {
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  height: 100px;
+  width: 100%;
+}
+
+.categories .c-cards .c-card .c-title .c-link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.categories .c-cards .c-card .c-title .c-sub {
+  color: #343a40;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.categories .c-cards .c-card .c-title .c-sub i {
+  margin-left: 10px;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.categories .c-cards .c-card .c-title .c-sub:hover > i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.categories .c-cards .c1 {
+  background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1c8916a656a029c3d82_20190619_SFP_Lifestyle_PrideTeesAndMore_FullRes-104.jpg");
+}
+
+.categories .c-cards .c2 {
+  background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1b0ad4a3ae318cdc394_20190805_SFP_Lifestyle_OSLOuterwear-124.jpg");
+}
+
+.categories .c-cards .c3 {
+  background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9db1df74e7f57a5deec8d6_hunter-johnson-W82dYwtQrTk-unsplash.jpg");
+}
+
+.categories .c-cards .c4 {
+  background-image: url("https://assets.website-files.com/5d9d08afa8a650dd43830c03/5da05eb2718dbe911936ab6d_5d9de0b7b7de93ab4e6020fd_haupes-co-6hpJZcqWt4I-unsplash.jpg");
 }
 /*# sourceMappingURL=main.css.map */
