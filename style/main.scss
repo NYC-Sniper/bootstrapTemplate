@@ -48,6 +48,14 @@ html, * {
     // mobile
     @media only screen and (max-width: 992px) {
         flex-direction: column;
+        min-height: 80vh;
+        .partOne {
+            .title {
+                h1 {
+                    font-size: 3rem !important;
+                }
+            }
+        }
         .partTwo {
             display: none;
         }
@@ -59,13 +67,15 @@ html, * {
         align-items: center;
         display: flex;
         flex: 1;
-        h1 {
-            font-family: $mainFont;
-            font-size: 4rem;
-        }
-        p {
-            padding-right: 30px;
-            line-height: 2;
+        .title {
+            h1 {
+                font-family: $mainFont;
+                font-size: 4rem;
+            }
+            p {
+                padding-right: 30px;
+                line-height: 2;
+            }
         }
     }
 
