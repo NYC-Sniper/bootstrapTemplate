@@ -359,16 +359,6 @@ html, * {
   background-position: center center;
 }
 
-.categories .title {
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.categories .title h2 {
-  font-family: "Abril Fatface", serif;
-  text-align: center;
-}
-
 .categories .c-cards {
   padding: 4%;
   display: -ms-grid;
@@ -383,6 +373,9 @@ html, * {
   .categories .c-cards {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+  }
+  .categories .c-cards .c-card {
+    padding: 20px !important;
   }
 }
 
@@ -403,9 +396,9 @@ html, * {
 }
 
 .categories .c-cards .c-card .c-title {
-  background-color: rgba(255, 255, 255, 0.75);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

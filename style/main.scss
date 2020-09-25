@@ -97,16 +97,6 @@ html, * {
 
 // categories
 .categories {
-    // title
-    .title {
-        margin: 0 auto;
-        margin-top: 50px;
-        h2 {
-            font-family: $mainFont;
-            text-align: center;
-        }
-    }
-
     .c-cards {
         padding: 4%;
         display: grid;
@@ -117,6 +107,9 @@ html, * {
         // mobile
         @media screen and (max-width: 992px) {
             grid-template-columns: auto;
+            .c-card {
+                padding: 20px !important;
+            }
         }
 
         // cards
@@ -133,8 +126,8 @@ html, * {
 
             // title
             .c-title {
-                background-color: rgba(255, 255, 255, 0.75);
-                backdrop-filter: blur(1rem);
+                background-color: rgba(255, 255, 255, 0.55);
+                backdrop-filter: blur(2rem);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
