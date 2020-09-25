@@ -1,0 +1,90 @@
+@import 'var', 'utilities';
+
+// import Bootstrap sass files
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// general reset
+html, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+// navbar + Hero
+// navbar
+.navbar {
+    padding: 0 4%;
+    @media only screen and (max-width: 992px) {
+        .navbar-brand {
+            margin-right: 0 !important;
+        }
+    }
+
+    background-color: transparent;
+    // brand 
+    .navbar-brand {
+        font-family: $mainFont;
+        font-size: 1.4rem;
+    }
+
+    // menu
+    .navbar-nav {
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+}
+
+// hero
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    // mobile
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+        .partTwo {
+            display: none;
+        }
+    }
+
+    // left part
+    .partOne {
+        padding: 4%;
+        align-items: center;
+        display: flex;
+        flex: 1;
+        h1 {
+            font-family: $mainFont;
+            font-size: 4rem;
+        }
+        p {
+            padding-right: 30px;
+            line-height: 2;
+        }
+    }
+
+    // right part
+    .partTwo {
+        height: 100vh;
+        width: 100%;
+        flex: 1;
+        background-image: url("https://assets.website-files.com/5d9d08afa8a650b6a1830c36/5d9dca60ad4a3a3c16ceadeb_20190706_SFP_Lifestyle_Accessories_JohnKira_FullRes-125.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+// test
+.test {
+    padding: 4%;
+    h1 {
+        font-family: $mainFont;
+    }
+}
